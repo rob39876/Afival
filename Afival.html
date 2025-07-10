@@ -1,0 +1,323 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afival, S.L. - Servicios Fiscales y Contables en Valencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .service-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white border-opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <defs>
+                            <radialGradient id="faceGradient" cx="0.5" cy="0.3" r="0.8">
+                                <stop offset="0%" stop-color="#fdd5c4"/>
+                                <stop offset="100%" stop-color="#f4a688"/>
+                            </radialGradient>
+                            <linearGradient id="hairGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#8b7355"/>
+                                <stop offset="100%" stop-color="#6b5b47"/>
+                            </linearGradient>
+                            <linearGradient id="suitGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#2d3748"/>
+                                <stop offset="100%" stop-color="#1a202c"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Professional background -->
+                        <rect width="200" height="200" fill="#e2e8f0"/>
+                        
+                        <!-- Neck -->
+                        <ellipse cx="100" cy="140" rx="18" ry="25" fill="url(#faceGradient)"/>
+                        
+                        <!-- Face with realistic shading -->
+                        <ellipse cx="100" cy="85" rx="38" ry="42" fill="url(#faceGradient)"/>
+                        
+                        <!-- Face shadows -->
+                        <ellipse cx="95" cy="90" rx="35" ry="38" fill="#f4a688" opacity="0.3"/>
+                        <ellipse cx="100" cy="95" rx="25" ry="30" fill="#fdd5c4" opacity="0.6"/>
+                        
+                        <!-- Hair with realistic texture -->
+                        <path d="M62 65 C62 35, 75 25, 100 25 C125 25, 138 35, 138 65 C138 50, 130 45, 125 48 C120 40, 115 42, 110 44 C105 42, 100 40, 95 42 C90 40, 85 42, 80 48 C75 45, 67 50, 62 65 Z" fill="url(#hairGradient)"/>
+                        
+                        <!-- Hair texture details -->
+                        <path d="M70 50 Q75 48 80 52" stroke="#6b5b47" stroke-width="1" opacity="0.7"/>
+                        <path d="M85 45 Q90 43 95 47" stroke="#6b5b47" stroke-width="1" opacity="0.7"/>
+                        <path d="M105 45 Q110 43 115 47" stroke="#6b5b47" stroke-width="1" opacity="0.7"/>
+                        <path d="M120 50 Q125 48 130 52" stroke="#6b5b47" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- Glasses frame with realistic reflection -->
+                        <ellipse cx="85" cy="75" rx="13" ry="11" fill="none" stroke="#1a202c" stroke-width="2.5"/>
+                        <ellipse cx="115" cy="75" rx="13" ry="11" fill="none" stroke="#1a202c" stroke-width="2.5"/>
+                        <line x1="98" y1="75" x2="102" y2="75" stroke="#1a202c" stroke-width="2.5"/>
+                        
+                        <!-- Glasses lenses with realistic reflection -->
+                        <ellipse cx="85" cy="75" rx="11" ry="9" fill="#ffffff" opacity="0.15"/>
+                        <ellipse cx="115" cy="75" rx="11" ry="9" fill="#ffffff" opacity="0.15"/>
+                        <ellipse cx="82" cy="72" rx="4" ry="3" fill="#ffffff" opacity="0.8"/>
+                        <ellipse cx="112" cy="72" rx="4" ry="3" fill="#ffffff" opacity="0.8"/>
+                        
+                        <!-- Eyes with realistic detail -->
+                        <ellipse cx="85" cy="75" rx="4" ry="3" fill="#ffffff"/>
+                        <ellipse cx="115" cy="75" rx="4" ry="3" fill="#ffffff"/>
+                        <circle cx="85" cy="75" r="2.5" fill="#4a5568"/>
+                        <circle cx="115" cy="75" r="2.5" fill="#4a5568"/>
+                        <circle cx="86" cy="74" r="0.8" fill="#ffffff"/>
+                        <circle cx="116" cy="74" r="0.8" fill="#ffffff"/>
+                        
+                        <!-- Eyebrows -->
+                        <path d="M78 68 Q85 66 92 68" stroke="#6b5b47" stroke-width="2" fill="none"/>
+                        <path d="M108 68 Q115 66 122 68" stroke="#6b5b47" stroke-width="2" fill="none"/>
+                        
+                        <!-- Nose with shading -->
+                        <path d="M100 80 L97 90 L103 90 Z" fill="#f4a688"/>
+                        <path d="M98 85 L100 88 L102 85" fill="#e2a085" opacity="0.6"/>
+                        
+                        <!-- Mouth -->
+                        <path d="M94 98 Q100 102 106 98" stroke="#c53030" stroke-width="1.5" fill="none"/>
+                        <path d="M96 99 Q100 101 104 99" fill="#e53e3e" opacity="0.3"/>
+                        
+                        <!-- Facial structure lines -->
+                        <path d="M75 85 Q80 88 75 92" stroke="#e2a085" stroke-width="0.8" fill="none" opacity="0.4"/>
+                        <path d="M125 85 Q120 88 125 92" stroke="#e2a085" stroke-width="0.8" fill="none" opacity="0.4"/>
+                        <path d="M88 105 Q95 108 102 105" stroke="#e2a085" stroke-width="0.8" fill="none" opacity="0.3"/>
+                        
+                        <!-- Professional suit jacket -->
+                        <path d="M65 130 L100 125 L135 130 L140 200 L60 200 Z" fill="url(#suitGradient)"/>
+                        
+                        <!-- Suit lapels -->
+                        <path d="M75 135 L100 130 L100 160 L85 155 Z" fill="#1a202c"/>
+                        <path d="M125 135 L100 130 L100 160 L115 155 Z" fill="#1a202c"/>
+                        
+                        <!-- White dress shirt -->
+                        <path d="M85 130 L100 125 L115 130 L115 200 L85 200 Z" fill="#ffffff"/>
+                        
+                        <!-- Professional tie -->
+                        <path d="M95 130 L105 130 L108 180 L92 180 Z" fill="#2b6cb0"/>
+                        <path d="M97 135 L103 135 L103 145 L97 145 Z" fill="#3182ce" opacity="0.7"/>
+                        <path d="M97 150 L103 150 L103 160 L97 160 Z" fill="#3182ce" opacity="0.7"/>
+                        <path d="M97 165 L103 165 L103 175 L97 175 Z" fill="#3182ce" opacity="0.7"/>
+                        
+                        <!-- Shirt collar -->
+                        <path d="M85 130 L100 135 L115 130 L110 145 L100 140 L90 145 Z" fill="#f7fafc"/>
+                        
+                        <!-- Professional lighting and shadows -->
+                        <ellipse cx="90" cy="80" rx="45" ry="50" fill="#ffffff" opacity="0.1"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Afival, S.L.</h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-100">Expertos en Asesoría Fiscal y Contable</p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Ofrecemos servicios profesionales de asesoramiento fiscal, contable y laboral para empresas y particulares en Valencia</p>
+        </div>
+    </header>
+
+    <!-- Servicios -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Servicios integrales de asesoría fiscal adaptados a sus necesidades</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Declaración de la Renta (IRPF)</h3>
+                    <p class="text-gray-600">Preparación y presentación de declaraciones de IRPF para particulares y autónomos</p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Asesoría para Autónomos</h3>
+                    <p class="text-gray-600">Gestión integral para trabajadores autónomos: altas, bajas, y obligaciones fiscales</p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Contabilidad de Empresas</h3>
+                    <p class="text-gray-600">Llevanza de contabilidad, libros oficiales y cuentas anuales</p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17,18C17.56,18 18,17.56 18,17C18,16.44 17.56,16 17,16C16.44,16 16,16.44 16,17C16,17.56 16.44,18 17,18M6.5,10L10,6L13.5,10H11V16H9V10H6.5M2.5,4H21.5L20,2H4L2.5,4Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">IVA y Obligaciones Tributarias</h3>
+                    <p class="text-gray-600">Gestión de IVA trimestral, modelo 303, y otras obligaciones fiscales</p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Constitución de Sociedades</h3>
+                    <p class="text-gray-600">Asesoramiento en la creación de empresas y elección de forma jurídica</p>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Planificación Fiscal</h3>
+                    <p class="text-gray-600">Optimización fiscal y planificación estratégica para minimizar la carga tributaria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">¿Por Qué Elegirnos?</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Experiencia Profesional</h3>
+                    <p class="text-gray-600">Años de experiencia en asesoría fiscal y conocimiento actualizado de la normativa</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2M21,9V7L15,1H5C3.89,1 3,1.89 3,3V21A2,2 0 0,0 5,23H19A2,2 0 0,0 21,21V9M19,9H14V4H5V21H19V9Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Atención Personalizada</h3>
+                    <p class="text-gray-600">Cada cliente recibe un trato personalizado adaptado a sus necesidades específicas</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Confidencialidad Total</h3>
+                    <p class="text-gray-600">Máxima confidencialidad y seguridad en el manejo de su información fiscal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contacto</h2>
+                <p class="text-lg text-gray-600">Estamos aquí para ayudarle con sus necesidades fiscales</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <!-- Información de contacto -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Información de Contacto</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 text-blue-600 mt-1 mr-3">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">C/ dels Sants Just i Pastor, 33<br>46940 Manises, Valencia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 text-blue-600 mt-1 mr-3">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">961 53 28 53</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 text-blue-600 mt-1 mr-3">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@asesorfiscalmanises.es</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 text-blue-600 mt-1 mr-3">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Horario</h4>
+                                <p class="text-gray-600">Lunes: 9:00 - 14:00<br>Martes: 9:00 - 14:00, 16:00 - 19:00<br>Miércoles: 9:00 - 14:00<br>Jueves: 9:00 - 14:00<br>Viernes: Cerrado<br>Sábado y Domingo: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-xl font-semibold mb-2">Afival, S.L.</h3>
+            <p class="text-gray-400 mb-4">Su socio de confianza en asesoría fiscal y contable</p>
+            <p class="text-gray-400 text-sm">C/ dels Sants Just i Pastor, 33, 46940 Manises, Valencia</p>
+            <p class="text-gray-500 text-xs mt-4">© 2024 Afival, S.L. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95b63f8de7e3cbc8',t:'MTc1MTg3OTg0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
